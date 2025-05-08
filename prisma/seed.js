@@ -1,33 +1,3 @@
-// const { PrismaClient } = require('@prisma/client');
-// const prisma = new PrismaClient();
-
-// async function main() {
-//   const bikeType = await prisma.vehicleType.create({
-//     data: { name: 'Cruiser', wheels: 2 },
-//   });
-
-//   const carTypes = await prisma.vehicleType.createMany({
-//     data: [
-//       { name: 'Hatchback', wheels: 4 },
-//       { name: 'Sedan', wheels: 4 },
-//       { name: 'SUV', wheels: 4 },
-//     ],
-//   });
-
-//   const cruiser = await prisma.vehicle.createMany({
-//     data: [
-//       { model_name: 'Royal Enfield Classic', vehicle_type_id: bikeType.id },
-//       { model_name: 'Bajaj Avenger', vehicle_type_id: bikeType.id },
-//     ],
-//   });
-// }
-
-// main().catch(e => {
-//   console.error(e);
-//   process.exit(1);
-// }).finally(() => prisma.$disconnect());
-
-
 
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
