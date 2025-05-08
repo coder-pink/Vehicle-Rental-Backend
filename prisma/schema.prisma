@@ -19,11 +19,12 @@ model VehicleType {
   name   String
   wheels Int
   vehicles Vehicle[]
+  @@unique([name, wheels])
 }
 
 model Vehicle {
   id              Int      @id @default(autoincrement())
-  model_name      String
+  model_name      String     @unique
   vehicle_type_id Int
   type            VehicleType @relation(fields: [vehicle_type_id], references: [id])
   bookings        Booking[]
